@@ -1,0 +1,15 @@
+.instructions
+  =se("Twitter requires you to input your username and password here. Then we can post updates to your Twitter account.")
+.body
+  =form_for($info)
+  .section
+    %label =se("Twitter Username")
+    %br
+    =text_field("login", 'id', 'twitter_uname', 'class', 'test')
+    %br
+    %label =se("Twitter Password")
+    %br
+    =password_field("password") 
+  .section
+    =submit_tag("Save")       
+  =end_form_for()

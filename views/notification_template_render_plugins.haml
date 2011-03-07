@@ -1,0 +1,15 @@
+-if(!$template->is_public)
+  =se("The Twitter plugin is only active for Public notifications.")
+-else
+  .instructions
+    =se("This is the template that will be used to send out the notification to a user's Twitter feed.")
+  .body
+    =form_for($twitter_template)
+    %table
+      %tr
+        %th =se("Text body")
+        %td =text_field('body_text')
+      %tr
+        %th
+        %td =submit_tag('Save')
+    =end_form_for()
